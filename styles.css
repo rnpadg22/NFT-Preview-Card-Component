@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --soft-blue:hsl(215, 51%, 70%);
+    --cyan-view-icon: hsl(178, 100%, 50%, 60%);
+    --cyan: hsl(180, 76%, 51%);
+    --body-bg:hsl(217, 54%, 11%);
+    --card-bg:hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white:hsl(0, 0%, 100%);
+
+    --font-family-body: 'Outfit', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    background-color: var(--body-bg);
+    width: 100%;
+    height: 100vh;
+    color: var(--soft-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-body);
+}
+
+.card{
+    background-color: var(--card-bg);
+    border-radius: 1.5rem;
+    width: 35.6rem;
+    height: 58.9rem;
+    padding: 1.5rem;
+}
+
+.card-image-box{
+    position: relative;
+}
+
+.card-image-box .view-icon{
+    position: absolute;
+    background-color: var(--cyan-view-icon);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 250ms ease;
+}
+
+.card-image-box .view-icon:hover{
+    opacity: 1;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.card-image-box .view-icon img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.card-title{
+    color: var(--white);
+    margin: 1.6rem 0 1.6rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+    transition: color 250ms ease;
+}
+
+.card-paragraph{
+    margin: 0.6rem 0 1rem 0;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.card-information{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2rem;
+    margin-bottom: 2.4rem;
+    font-size: 1.6rem;
+}
+
+.card-price,
+.card-days{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-price{
+    color: var(--cyan);
+}
+
+.creator{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.avatar{
+    border: 1px solid #fff;
+    border-radius: 5rem;
+    margin-right: 1.2rem;
+    width: 3rem;
+}
+
+span{
+    color: #fff;
+    margin-left: 0.6rem;
+    transition: color 250ms ease;
+}
+
+.card-title:hover,
+.creator span:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 1rem;
+    font-size: 1.6rem;
+}
